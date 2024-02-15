@@ -1,4 +1,4 @@
-NAME	= template
+NAME	= whatever
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror
 SRC		= main.cpp
