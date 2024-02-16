@@ -44,7 +44,7 @@ Array<T>::Array(unsigned int n): _array(nullptr), _arrlen(n)
 		if (n < 1)
 		{
 			this->_array = nullptr;
-			throw OutOFBounds();
+			throw OutOfBounds();
 		}
 		else
 			this->_array = new T[this->_arrlen];
@@ -62,20 +62,20 @@ template<typename T>
 T &Array<T>::operator[](const int value)
 {
 	if (value < 0 || value >= this->_arrlen || this->_array == nullptr)
-		throw OutOFBounds();
+		throw OutOfBounds();
 	return (this->_array[value]);	
 }
 
 template<typename T>
-int Array<T>::size()
+int Array<T>::size() const
 {
 	return (this->_arrlen);
 }
 
-/* template<typename T>
+template<typename T>
 const char *Array<T>::OutOfBounds::what() const throw()
 {
 	return "Value out of bounds";
-} */
+}
 
 

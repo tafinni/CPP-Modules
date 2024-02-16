@@ -21,15 +21,12 @@ class Array
 
 		T &operator[](const int value);
 
-		int size();
+		int size() const;
 
-		class OutOFBounds: public std::exception
+		class OutOfBounds: public std::exception
 		{
 			public:
-				virtual const char *what() const throw()
-				{
-					return "Value out of bounds";
-				}
+				virtual const char *what() const throw();
 		};
 
 };

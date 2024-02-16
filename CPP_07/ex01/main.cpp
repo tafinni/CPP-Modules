@@ -1,17 +1,36 @@
 #include "iter.hpp"
 
-void printNumber(int i)
+template<typename T>
+void printAddress(T& address)
+{
+	std::cout << "address: " << std::addressof(address) << std::endl;
+}
+
+void printNumber(const int& i)
 {
 	std::cout << "number: " << i << std::endl;
 }
 
+void printStr(const std::string& array)
+{
+	std::cout << "array: " << array << std::endl;
+}
+
 int main()
 {
+
 	int array1[] = {0, 1, 2, 3, 4};
 
-	iter(array1, std::size(array1), printAddress <int>);
+	std::string array2[] = {"ABC", "DEF", "GHI", "JKL", "MNO"};
 
-	iter(array1, std::size(array1), printNumber);
+	std::cout << "- Testing with template -" << std::endl;
+	iter(array1, 5, printAddress);
+
+	std::cout << std::endl << "- Testing with int array -" << std::endl;
+	iter(array1, 5, printNumber);
+
+	std::cout << std::endl << "- Testing with std::string array -" << std::endl;
+	iter(array2, 5, printStr);
 
 	return (0);
 }

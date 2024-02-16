@@ -34,7 +34,27 @@ int main(int, char**)
         std::cout << doubleArray[i] << "  ";
     std::cout << std::endl << std::endl;
 
-    std::cout << "Testing copy constructor" << std::endl;
+    std::cout << "Trying to print negative value" << std::endl;
+    try
+    {
+        std::cout << intArray[-3] << std::endl << std::endl;
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+
+    std::cout << std::endl << "Trying to print too high value" << std::endl;
+    try 
+    {
+        std::cout << intArray[12] << std::endl << std::endl;
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+
+    std::cout << std::endl << "Testing copy constructor" << std::endl;
     Array<int> intArray2(intArray);
     std::cout << "First array" << std::endl;
     std::cout << "Size: " << intArray.size() << std::endl;
