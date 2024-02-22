@@ -72,7 +72,7 @@ int Span::shortestSpan()
 	if (this->_container.size() < 2)
 		throw NotEnoughValues();
 
-	int lowest = *std::max_element(this->_container.begin(), this->_container.end());
+	int lowest = Span::longestSpan();
 	int temp;
 	std::vector<int>::iterator compare = this->_container.begin();
 
@@ -86,7 +86,7 @@ int Span::shortestSpan()
 				temp = *compare - *it;
 				if (temp < 0)
 					temp *= -1;
-				if (temp < lowest)
+				if (std::abs(temp) < lowest)
 					lowest = temp;
 			}
 		}

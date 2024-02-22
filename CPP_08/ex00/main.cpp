@@ -10,6 +10,7 @@ int main()
     try
     {
         std::cout << easyFind(container, 12) << std::endl;
+        std::cout << "Value found" << std::endl;
     }
     catch (std::exception &e)
     {

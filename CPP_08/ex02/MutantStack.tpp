@@ -1,5 +1,5 @@
 template <typename T>
-MutantStack<T>::MutantStack(): std::stack<T>
+MutantStack<T>::MutantStack(): std::stack<T>()
 {
 
 }
@@ -35,4 +35,3 @@ typename MutantStack<T>::iterator MutantStack<T>::end()
 {
 	return c.end();
 }
-

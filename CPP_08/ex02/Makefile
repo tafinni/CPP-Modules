@@ -1,13 +1,12 @@
 NAME	= Mutant
 CC		= c++
-FLAGS	= -Wall -Wextra -Werror
 SRC		= main.cpp
-
+FLAGS	= -Wall -Wextra -Werror
 OBJ		= $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC)
+$(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
