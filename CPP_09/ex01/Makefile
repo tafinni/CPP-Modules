@@ -1,7 +1,7 @@
-NAME	= btc
+NAME	= RPN
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp src/BitcoinExchange.cpp src/validation.cpp src/handleFiles.cpp
+SRC		= main.cpp RPN.cpp
 
 OBJ		= $(SRC:.cpp=.o)
 

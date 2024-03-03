@@ -1,7 +1,7 @@
-NAME	= btc
+NAME	= PmergeMe
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp src/BitcoinExchange.cpp src/validation.cpp src/handleFiles.cpp
+SRC		= main.cpp PmergeMe.cpp
 
 OBJ		= $(SRC:.cpp=.o)
 
