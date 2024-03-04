@@ -6,7 +6,7 @@
 /*   By: tfinni <tfinni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 12:28:55 by tfinni            #+#    #+#             */
-/*   Updated: 2024/02/28 17:53:13 by tfinni           ###   ########.fr       */
+/*   Updated: 2024/03/04 13:11:48 by tfinni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int main(int argc, char **argv)
 		std::cerr << "Error: " << e.what() << std::endl;
 		return 1;
 	}
-	bit.readInput(argv[1]);
+	if (bit.readInput(argv[1]) == false)
+		return 1;
 	return 0;
 }
